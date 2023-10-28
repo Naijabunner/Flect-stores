@@ -237,7 +237,7 @@ min-width: 1vmin;
     padding: 1vmin;
     font-weight: bold;
     color: #fff;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lato', serif;
     font-size: 0.7rem;
 }
 .section_two{
@@ -464,7 +464,7 @@ Login page  starts
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    border-radius: 80px 0px 0px 0px;
+    border-radius: 80px 0px 80px 0px;
 
 }
 .logo{
@@ -493,7 +493,7 @@ Login page  starts
     overflow: scroll;
 }
 form::-webkit-scrollbar{
-    width: 1vmin;
+    width: 0vmin;
 }
 form::-webkit-scrollbar-track{
     background: none;
@@ -535,12 +535,13 @@ label{
     border: none;
     padding:0.2em 0;
     font-weight: bold;
-    font-family: 'Kurale', serif;
+    font-family: 'Lato', serif;
     font-size: large;
     display: flex;
     width: 100%;
     justify-content: center;
 }
+
 .design_cont{
     display: flex;
     min-width: 5vmin;
@@ -554,9 +555,9 @@ label{
     position: absolute;
     top: 0;
     left: 0;
-    min-width: 30vmin;
-    max-width: 40vmin;
-    min-height: 30vmin;
+    min-width: 15vmin;
+    max-width: 30vmin;
+    min-height: 15vmin;
     max-height: 40vmin;
     border-radius: 0px 0px 80px 0px;
 }
@@ -564,9 +565,9 @@ label{
     position: absolute;
     top: 0;
     right: 0;
-    min-width: 30vmin;
-    max-width: 40vmin;
-    min-height: 30vmin;
+    min-width: 15vmin;
+    max-width: 30vmin;
+    min-height: 15vmin;
     max-height: 40vmin;
     border-radius: 0px 0px 0px 80px;
 }
@@ -574,9 +575,9 @@ label{
     position: absolute;
     bottom: 0;
     left: 0;
-    min-width: 30vmin;
-    max-width: 40vmin;
-    min-height: 30vmin;
+    min-width: 15vmin;
+    max-width: 30vmin;
+    min-height: 15vmin;
     max-height: 40vmin;
     border-radius: 0px 80px 0px 0px;
 }
@@ -584,22 +585,23 @@ label{
     position: absolute;
     bottom: 0;
     right: 0;
-    min-width: 30vmin;
+    min-width: 15vmin;
     max-width: 40vmin;
-    min-height: 30vmin;
+    min-height: 15vmin;
     max-height: 40vmin;
     border-radius: 80px 0px 00px 0px;
 }
 #five{
-    position: absolute;
+    display: none;
+    /* position: absolute;
     bottom: 35%;
     left: 0;
-    min-width: 10vmin;
+    min-width: 7vmin;
     max-width: 40vmin;
-    min-height: 30vmin;
+    min-height: 15vmin;
     max-height: 40vmin;
-    border-radius:50px ;
-}
+    border-radius:50px ; */
+} 
 #forgot_password{
     margin: 0;
     display: flex;
@@ -609,14 +611,15 @@ label{
     font-family: 'Kurale', serif;
 }
 #six{
-    position: absolute;
+    display: none;
+    /* position: absolute;
     bottom:35%;
     right: 0%;
     min-width: 10vmin;
     max-width: 40vmin;
     min-height: 30vmin;
     max-height: 40vmin;
-    border-radius:50px ;
+    border-radius:50px ; */
 }
 #register_link{
     color: #847c7c;
@@ -663,15 +666,16 @@ sign up page  starts
     color: #fff;
     max-width: fit-content;
     min-width: fit-content;
-    height: 65vmin;
+    height: 70%;
     padding: 1em 2em;
     background-color: #181818;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    border-radius: 80px 0px 0px 0px;
+    border-radius: 80px 0px 80px 0px;
     border: 4px double;
+    z-index: 1;
 }
 .reg_title{
     margin: 0;
@@ -679,18 +683,7 @@ sign up page  starts
     font-size: 7vmin;
     font-family: 'Lato', sans-serif;
 }
-.login_btn{
-    margin: 2em 0;
-    border-radius: 30px;
-    border: none;
-    padding:0.2em 0;
-    font-weight: bold;
-    font-family: 'Kurale', serif;
-    font-size: large;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
+
 .Rdesign_cont{
     display: flex;
     background-color: #f6f6f6;
@@ -788,7 +781,6 @@ sign up page  starts
 /* forgot page start */
 .forgotpw_page{
     background-color: #000;
-    background-color: rgb(0, 0, 0);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -809,7 +801,7 @@ sign up page  starts
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 10%;
+    border-radius: 20px;
     font-size: 3vmin;
 
 }
@@ -856,10 +848,91 @@ sign up page  starts
 }
 /* forgotpw preference slide ends */
 
-
+/* Enter phone no or email */
 
 .forgothead{
-    background-color: #000;
+    font-size: 2vmin;
+    padding: 0%;
+    color: #000;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Kurale', serif;
+}
+.forgotpw_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fg_pw_form_cont label{
+    font-size: 1.5em;
+    font-family: 'Kurale', serif;
+
+}
+.forgotform_input{
+    padding-top: 1.5vmin;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+}
+.forgotform_input input{
+    outline: none;
+    border: none;
+}
+.forgotpw_btn{
+    margin-top: 10vmin;
+    width: 40vmin;
+    height: 7vmin;
+    border-radius: 30px;
+    border: none;
+    background-color: #3858D6;
+    cursor: pointer;
+}   
+
+/* otp slide 😻e */ 
+
+.otpSlide_cont h5{
+    font-family: 'Kurale', serif;
+    color: #000;
+    font-size: large;
+}
+.otpSlide_cont input{
+    width: 50%;
+    margin: auto;
+}
+.otp_confirmation_btn{
+    margin-top: 10vmin;
+    width: 40vmin;
+    height: 7vmin;
+    border-radius: 30px;
+    border: none;
+    background-color: #3858D6;
+    cursor: pointer;
+}
+#otp_confirmation_btn button{
+    font-size: larger;
+}
+
+
+/* Confirm password slide */
+.forgotpw_cont{
+    font-family: 'Kurale', serif;
+    color: #000;
+}
+.inputfpw_cont i{
+    font-size: smaller;
+    padding-left: 0.1rem;
+}
+.changepw_btn{
+    margin-top: 2em;
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 20px;
+    border: none;
+    background-color: #3858D6;
+    font-size: large;
+    font-family: 'Lato', serif;
+
 }
 @media screen and (max-width: 757px){
     .links, .icons_links{

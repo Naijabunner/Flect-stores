@@ -22,9 +22,8 @@ const Forgotpw = () => {
 
   ////handling validate otp
   const validateOtp = () => {
-    setcodevalid(true)
-  }
-   
+    setcodevalid(true);
+  };
 
   ///slide for slection of prefrence
   const Options = () => {
@@ -49,29 +48,40 @@ const Forgotpw = () => {
               onClick={handleSubmit}
             />
           </div>
-          <p>Don't have an account? Sign up</p>
+          <a href="/Register">
+            <p>Don't have an account? Sign up</p>
+          </a>
         </div>
       );
     }
   };
 
-  ////////otp slide
+  ////////otp slide/////////////////////////////
   const Otpslide = () => {
     return (
       <div className="otpSlide_cont">
-        <h5>Enter OTP sent to {useraddress}</h5>
+        <h5>Enter OTP sent to <br />{useraddress}</h5>
+        <div className="forgotform_input">
           <input type="number" required placeholder="OTP" />
-          <a href="/Change-password"> <button> Reset</button></a>
+          </div>
+        <a href="/Change-password" id="otp_confirmation_btn">
+          <button className="otp_confirmation_btn"> Reset</button>
+        </a>
+       
+        
       </div>
     );
   };
 
-  /////change pw slide
-  const Changepw = () => {};
-
   return (
     <>
       <div className="forgotpw_page">
+        <div className="design_cont" id="one"></div>
+        <div className="design_cont" id="two"></div>
+        <div className="design_cont" id="three"></div>
+        <div className="design_cont" id="four"></div>
+        <div className="design_cont" id="five"></div>
+        <div className="design_cont" id="six"></div>
         <h1 className="logo">
           <a href="/">FlecT</a>
         </h1>
@@ -83,19 +93,24 @@ const Forgotpw = () => {
                 Enter the {option} associated with your account and <br /> we'll
                 send you a code to reset your password
               </h4>
-
+              {/* enter 📱 0r 📧  */}
               <form className="forgotpw_form" onSubmit={handleSendingotp}>
-                <label className="forgotpw_input_label">{option}</label>
-                <input
-                  type={option === "Phone number" ? "number" : "text"}
-                  className="forgotform_input"
-                  value={useraddress}
-                  onChange={(e) => setuseraddress(e.target.value)}
-                />
+                <div className="fg_pw_form_cont">
+                  <label>{option}</label>
+                  <div className="forgotform_input">
+                    <input
+                      type={option === "Phone number" ? "number" : "text"}
+                      value={useraddress}
+                      onChange={(e) => setuseraddress(e.target.value)}
+                    />
+                  </div>
+                </div>
                 <button className="forgotpw_btn">Continue</button>
               </form>
 
-              <p>Don't have an account? Sign up</p>
+              <a href="/Register">
+                <p>Don't have an account? Sign up</p>
+              </a>
             </div>
           ) : (
             <Options />

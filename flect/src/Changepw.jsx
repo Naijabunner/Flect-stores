@@ -43,7 +43,9 @@ const Changepw = () => {
           <a href="/">FlecT</a>
         </h1>
         <div className="forgotpw_cont">
+            
         {pwcorrect===true ?<Changesuccess />:<form onSubmit={handleSubmitpw}>
+        <h2 className="confirm_pw">Reset Password</h2>
         <label>Password</label>
            <div className="inputfpw_cont">
             <input type={displaypw?"text":"password"}onChange={(e)=>setpwone(e.target.value)} required/>
@@ -56,7 +58,7 @@ const Changepw = () => {
             {!displaypw ?<i className="fa-regular fa-eye" id="see_pw" onClick={handleDisplaypw}></i>:
             <i class="fa-regular fa-eye-slash" onClick={handleDisplaypw}></i>}
             </div> 
-                <button>Continue</button>
+                <button className="changepw_btn">Continue</button>
         </form> }
         <p>{pwcorrect ==="dont match"?"Passwords don't match":""}</p>
         </div>
