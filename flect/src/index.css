@@ -1,0 +1,916 @@
+  @import url('https://fonts.googleapis.com/css2?family=Kurale&family=Lato:wght@300;400;700&family=Poppins:wght@500;600;700&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border:5px solid #fff; */
+}
+.header{
+    border: 1px solid black;
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    padding: 0 25vmin;
+    font-family: 'Lato', serif;
+
+}
+nav{
+    color: #000;
+    position: absolute;
+    top: 10;
+    right: 8%;
+    z-index: 1;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+
+
+nav{
+    display: none;
+}
+.header li{
+    display: inline-block;
+    padding: 0 0.5em;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+ul.dropdown li{
+    display: block;
+}
+.dropdown{
+    width: fit-content;
+    background-color: #3858D6;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+.brands:hover .dropdown{
+    display: block;
+}
+.header li a{
+    text-decoration: none;
+    color: #8B8E99;
+    font-size: small;
+
+}
+.side_nav{
+    background-color: #000000;
+    width: 50vw;
+    position: absolute;
+    top: 0rem;
+    right: 0px;
+    padding: 0 4vmin ;
+    display: flex;
+    justify-content: center;
+}
+.ham_nav{
+    color: #fff;
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+}
+.side_nav ul{
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    background-color: #878484;
+    align-items: center;
+}
+.side_nav li{
+    padding: 1rem;
+    margin: 0;
+    width: 100%;
+    background-color: #ada5a5;
+}
+#Navbar_search_btn{
+    text-decoration: none;
+    color: #8B8E99;
+    font-size: small;
+}
+#nav_arrow{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: small;
+    padding-left: 0.3em;
+}
+
+.lander{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-image: linear-gradient(330deg, rgb(0, 0, 0) , rgb(44, 44, 44));
+    min-height: fit-content;
+    max-height: fit-content;
+    max-width: 100vw;
+    min-width: fit-content;
+    box-shadow: 1px 5px 6px rgb(62, 64, 65);
+}
+.landing_text_cont{
+    display: flex;
+    justify-content: center;
+
+}
+.landing_text h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 800;
+    font-weight: bold;
+}
+
+.landing_text{
+    /* background: url(".\assets\new-smartwatch-balancing-with-hand-removebg-preview.png");
+    background-position: center;
+    background-attachment: local;
+    background-size: cover; */
+    display: flex;
+    flex-direction: column;
+    font-weight: lighter;
+    justify-content: center;
+    padding-left: 3em;
+    color: #fff;
+    font-size: 3vmin;
+    font-family: 'Poppins', sans-serif;
+    max-width: fit-content;
+    min-height: 80vh;
+}
+.brand_img{
+    display: inline-block;
+    position: relative;
+    justify-content: center;
+    min-width: 30vw;
+    min-height: 5vh;
+    padding: 1rem;
+
+}
+.input_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     background-color: #ffffff;
+    height: 40px;
+    max-width: fit-content;
+    min-width: fit-content;
+    margin-bottom: 1.5rem;
+    padding: 0 1vmin;
+    border-radius: 7px;
+}
+.Search_input{
+    min-height: 3vmin;
+    max-height: 10vmin;
+    padding: 0 0.3rem;
+    margin: 0 0.3rem;
+    border: none;
+    outline: none;
+    min-width: 2vw;
+    max-width: 23vmax;
+}
+::placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: rgb(184, 189, 186);
+    padding: 5px;
+  }
+
+
+/* img{
+    max-width: 100%;
+    min-width: 20rem;
+} */
+.brand_container {
+    display: flex;
+    /* flex-direction: column; */
+    /* background-color: #3858D6; */
+    justify-content: center;
+    min-width:fit-content;
+}
+.brand_container li {
+    display: inline-block;
+}
+.brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4%;
+    /* background-color: #655f5f; */
+    max-width: 20em;
+    min-width: 10rem;
+    height: fit-content;
+    padding: 2%;
+    border-radius: 15px;
+    background-color: #F6F6F6;
+}
+.side_nav{
+    display: none;
+}
+/* .brands_desc{
+    display: block;
+    background-color: #3858D6;
+
+} */
+
+.brand h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #000;
+}
+.brand p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.6rem;
+    color: #8B8E99;
+}
+.brand_img{
+min-width: 0.5rem;
+max-width: 4rem;
+}
+#search_icon{
+color: #3858D6;
+min-width: 1vmin;
+}
+.landing_search_btn{
+    min-height: 2vmin;
+    border-radius: 7px;
+    border: none;
+    background-color: #3858D6;
+    padding: 1vmin;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.7rem;
+}
+.section_two{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-width: fit-content;
+    max-width: 100vw;
+   }
+   .brand_container{
+    display: flex;
+    justify-content: center;
+   }
+.test{
+    display: grid;
+    justify-content: space-evenly;
+    /* grid-template-columns: 25px 25px 25px ; */
+    grid-template-columns: auto auto auto ;
+    gap: 10vmin;
+    max-width: 10vmin;
+    min-width: 5vmin;
+}
+.lpbrands_cont{
+    width: fit-content;
+     display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: fit-content;
+    min-width: 30vmin;
+    margin: auto; 
+}
+.lpbrands_cont img{
+    padding: 1rem;
+    max-width: 20vmin;
+    min-width: 10vmin;
+    background-color: #f6f6f6;
+    border-radius: 30px;
+}
+.lpbrands_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+.lpbrands_info h3{
+    font-size: 4vmin;
+    padding: 0;
+    margin: 0;
+}
+
+.latestproducts_title, .client_desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    font-family: 'Poppins', sans-serif;
+}
+.img_buy_fav img{
+    max-width: 7rem;
+    min-width: fit-content;
+}
+.client_info{
+    padding:  0;
+    max-width: 60vmin;
+    min-width: 40vmin;
+    max-height: fit-content;
+    min-height: fit-content;
+    display: flex;
+    align-items: center;
+    margin: 10px 20px;
+    padding: 1em;
+    border-radius: 30px;
+    background-color: #f6f6f6;
+
+}
+.cl_name{
+    margin: 0;
+}
+.cl_comment{
+    margin: 0;
+}
+.client_info img{
+    max-width: 30vmin;
+    min-width: 20vmin;
+    max-height: 30vmin;
+    min-height: 20vmin;
+    margin-right: 1em ;
+}
+.client_info_cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prices{
+    display: flex;
+    background-color: #ffffff;
+    align-items: center;
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+.newsletter_cont{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.newsletter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin: 2vh 0;
+    background-color: #f6f6f6;
+    border-radius: 20px;
+}
+.newsletter_cont img{
+    display: inline-block;
+    min-width: 10vmin;
+    max-width: 25vmin;
+}
+.Nw_form input{
+    min-width: none;
+    max-width: 80vmin;
+}
+.Nw_form_cont{
+    margin: 0 2vw;
+}
+.Nw_label{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+.Nw_head{
+     font-size: 4vmin;
+} 
+.Nw_p{
+    font-size: 2vmin;
+}
+.Nw_form button{
+    background-color: #3858D6;
+    border: 2px rgb(45, 45, 45) solid;
+    color: white;
+}
+.latestproducts_title p, .client_desc p{
+    color: #3858D6;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+.latestproducts_title h3{
+    font-family: 'Poppins', sans-serif;
+}
+.latestproducts_title h3, .latestproducts_title p, .client_desc p, .client_desc h2{
+    margin: 0;
+    padding: 0;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    background-color: #000;
+    color: white;
+    font-size: 2vmin;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    padding: 0%;
+    align-items: center;
+}
+.footer p{
+
+    padding: 0;
+    margin: 0;
+}
+aside{
+    margin: 0.5rem 0;
+    font-size: 10px;
+}
+.oldprice{
+    margin: 0 0.5em;
+    color: #878484;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2vmin;
+}
+.newprice{
+    margin: 0 ;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 3vmin;
+}
+
+
+/* 
+
+
+
+
+
+Login page  starts
+
+
+
+
+
+*/
+.sign_page{
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 100vw;
+    min-width: fit-content;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+.login_cont{
+    color: #fff;
+    border: 4px double;
+    max-width: fit-content;
+    min-width: fit-content;
+    height: 65vmin;
+    padding: 1em 2em;
+    background-color: #181818;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 80px 0px 0px 0px;
+
+}
+.logo{
+    margin: 0%;
+    margin-top: 2vmin;
+    margin-bottom: 5vmin;
+    font-family: 'Lato', sans-serif;
+    font-size: 10vmin;
+    color: #fff;
+
+}
+.sign_page a {
+    text-decoration: none;
+    color: #000;
+    margin: 0;
+}
+.login_title{
+    margin: 0;
+    font-size: 7vmin;
+    font-family: 'Lato', sans-serif;
+}
+.sign_form{
+    margin: 0%;
+    font-family: 'Kurale', serif;
+    height: 60vmin;
+    overflow: scroll;
+}
+form::-webkit-scrollbar{
+    width: 1vmin;
+}
+form::-webkit-scrollbar-track{
+    background: none;
+}
+form::-webkit-scrollbar-thumb{
+    background-color: #f6f6f6;
+    border-radius: 30px;
+}
+label{
+    font-size: 2vmin;
+    font-weight: bold;
+}
+
+.username_div input, .password_div input{
+    border: none;
+    outline: none;
+    background: none;
+    color: #fff;
+}
+.password_div, .username_div{
+    border-bottom: 1px solid #000;
+    padding: 0.2em;
+    display: flex;
+    align-items: center;
+
+}
+.password_div i, .username_div i, .Rpassword_div i, .Rusername_div i{
+    color: #717171;
+    font-weight: light;
+    padding-right: 0.2rem;
+    font-size: small;
+}
+.username_div{
+    margin-bottom:0.3em ;
+}
+.login_btn{
+    margin: 2em 0;
+    border-radius: 30px;
+    border: none;
+    padding:0.2em 0;
+    font-weight: bold;
+    font-family: 'Kurale', serif;
+    font-size: large;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.design_cont{
+    display: flex;
+    min-width: 5vmin;
+    max-width: 5vmin;
+    min-height: 2vmin;
+    max-height: 2vmin;
+
+    background-color: #f6f6f6;
+}
+#one{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 30vmin;
+    max-width: 40vmin;
+    min-height: 30vmin;
+    max-height: 40vmin;
+    border-radius: 0px 0px 80px 0px;
+}
+#two{
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 30vmin;
+    max-width: 40vmin;
+    min-height: 30vmin;
+    max-height: 40vmin;
+    border-radius: 0px 0px 0px 80px;
+}
+#three{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-width: 30vmin;
+    max-width: 40vmin;
+    min-height: 30vmin;
+    max-height: 40vmin;
+    border-radius: 0px 80px 0px 0px;
+}
+#four{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    min-width: 30vmin;
+    max-width: 40vmin;
+    min-height: 30vmin;
+    max-height: 40vmin;
+    border-radius: 80px 0px 00px 0px;
+}
+#five{
+    position: absolute;
+    bottom: 35%;
+    left: 0;
+    min-width: 10vmin;
+    max-width: 40vmin;
+    min-height: 30vmin;
+    max-height: 40vmin;
+    border-radius:50px ;
+}
+#forgot_password{
+    margin: 0;
+    display: flex;
+    font-size: small;
+    justify-content: end;
+    color: #fff;
+    font-family: 'Kurale', serif;
+}
+#six{
+    position: absolute;
+    bottom:35%;
+    right: 0%;
+    min-width: 10vmin;
+    max-width: 40vmin;
+    min-height: 30vmin;
+    max-height: 40vmin;
+    border-radius:50px ;
+}
+#register_link{
+    color: #847c7c;
+    font-family: 'Lato', sans-serif;
+    font-size: small;
+    font-weight: lighter;
+}
+
+
+/* 
+
+
+
+
+
+sign up page  starts
+
+
+
+
+
+*/
+.Reg_form{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px 5px;
+    align-items: center;
+}
+.signinopton_div{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    font-size: small;
+    font-weight: lighter;
+    font-family: 'Lato', sans-serif;
+}
+#return_login{
+    color: #847c7c;
+    
+}
+.reg_cont{
+    position: relative;
+    color: #fff;
+    max-width: fit-content;
+    min-width: fit-content;
+    height: 65vmin;
+    padding: 1em 2em;
+    background-color: #181818;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 80px 0px 0px 0px;
+    border: 4px double;
+}
+.reg_title{
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 7vmin;
+    font-family: 'Lato', sans-serif;
+}
+.login_btn{
+    margin: 2em 0;
+    border-radius: 30px;
+    border: none;
+    padding:0.2em 0;
+    font-weight: bold;
+    font-family: 'Kurale', serif;
+    font-size: large;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.Rdesign_cont{
+    display: flex;
+    background-color: #f6f6f6;
+}
+#Rone{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 20vmin;
+    max-width: 40vmin;
+    min-height: 20vmin;
+    max-height: 40vmin;
+    border-radius: 0px 0px 80px 0px;
+}
+#Rtwo{
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 20vmin;
+    max-width: 40vmin;
+    min-height: 20vmin;
+    max-height: 40vmin;
+    border-radius: 0px 0px 0px 80px;
+}
+#Rthree{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-width: 20vmin;
+    max-width: 40vmin;
+    min-height: 20vmin;
+    max-height: 40vmin;
+    border-radius: 0px 80px 0px 0px;
+}
+#Rfour{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    min-width: 20vmin;
+    max-width: 40vmin;
+    min-height: 20vmin;
+    max-height: 40vmin;
+    border-radius: 80px 0px 00px 0px;
+}
+#Rfive{
+    position: absolute;
+    bottom: 35%;
+    left: 0;
+    min-width: 10vmin;
+    max-width: 40vmin;
+    min-height: 30vmin;
+    max-height: 40vmin;
+    border-radius:50px ;
+}
+#Rsix{
+    position: absolute;
+    bottom:35%;
+    right: 0%;
+    min-width: 10vmin;
+    max-width: 40vmin;
+    min-height: 30vmin;
+    max-height: 40vmin;
+    border-radius:50px ;
+}
+.address_div{
+    display: flex;
+    flex-direction: column;
+}
+.Rdesign_cont{
+    position: absolute;
+}
+.Rpassword_div, .Rusername_div{
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 1vmin;
+    border-radius: 5px;
+    border: none;
+}
+.Rpassword_div input, .Rusername_div input{
+   outline: none;
+   border: none;
+   background: none;
+}
+#RRthree{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-width: 20vmin;
+    max-width: 40vmin;
+    min-height: 20vmin;
+    max-height: 40vmin;
+    border-radius: 0px 80px 0px 0px;
+}
+/* forgot page start */
+.forgotpw_page{
+    background-color: #000;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 100vw;
+    min-width: fit-content;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+.forgotpw_cont{
+    background-color: #ffffff;
+    color: #fff;
+    max-width: fit-content;
+    min-width: fit-content;
+    height: 65vmin;
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10%;
+    font-size: 3vmin;
+
+}
+.logo a{
+    text-decoration: none;
+    color:#fff;
+}
+/* forgotpw preference slide */
+.forgotpw_option{
+    color: #000;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+.forgotpw_text{
+    font-family: 'Lato', serif;
+}
+.selcect_retrieve{
+    font-family: 'Kurale', serif;
+}
+.option_btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    height: 30%;
+    
+}
+.Phoneno{
+    height: 50%;
+    margin-bottom: 1em;
+    font-family: 'Kurale', serif;
+    border-radius: 20px;
+    border: none;
+}
+.email{
+    height: 50%;
+    font-family: 'Kurale', serif;
+    border-radius: 20px;
+    border: none;
+    background-color: #3858D6;
+}
+/* forgotpw preference slide ends */
+
+
+
+.forgothead{
+    background-color: #000;
+}
+@media screen and (max-width: 757px){
+    .links, .icons_links{
+        display: none;
+}
+nav{
+    display: block;
+}
+#RRthree{
+    min-width: 15vmin;
+    max-width: 30vmin;
+    min-height: 15vmin;
+    max-height: 20vmin;
+}
+.landing_text{
+    background-image: url(".\assets\new-smartwatch-balancing-with-hand-removebg-preview.png");
+    background-attachment: local;
+    background-position: center;
+    background-size: cover;
+     /* background: url(".\assets\new-smartwatch-balancing-with-hand-removebg-preview.png");
+    background-position: center;
+    background-attachment: local;
+    background-size: cover; */
+
+}
+.home img{
+    display: none;
+}
+.test{
+    grid-template-columns: auto auto ;
+
+}
+.client_info_cont{
+    flex-direction: column;
+
+}
+.latestproducts_title h3, .latestproducts_title p, .client_desc p, .client_desc h2{
+    font-size: small;
+}
+.brand h2{
+    font-size: 0.7rem;
+    color: #000;
+}
+.brand p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.7rem;
+    color: #8B8E99;
+}
+.brand_img{
+min-width: 0.4rem;
+max-width: 3rem;
+}
+
+}
