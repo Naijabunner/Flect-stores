@@ -6,13 +6,13 @@ const Changepw = () => {
     const [displaypw, setdisplaypw]= useState(false)
     const [pwcorrect, setpwcorrect]=useState(false)
     const navigate =useNavigate()
-    // console.log(pwone)
-    // console.log(pwtwo)
-    if (pwcorrect=== true) {
-        setTimeout(() => {
-            navigate("/Login")
-        }, 3000);
-    }
+     console.log(pwone)
+     console.log(pwtwo)
+     if (pwcorrect=== true) {
+         setTimeout(() => {
+             navigate("/Login")
+         }, 3000);
+     }
     const handleSubmitpw=(e)=>{
         e.preventDefault()
         setdisplaypw(false)
@@ -27,6 +27,8 @@ const Changepw = () => {
                 <h2 className="pw_change_success">
                     Your Account Reset Was succesfull
                 </h2>
+                <i className="fa-solid fa-check" id="checkbox_i"></i>
+            <small>Redirecting.....</small>
             </div>
             </>
         )

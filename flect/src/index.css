@@ -441,7 +441,7 @@ Login page  starts
 
 */
 .sign_page{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -453,7 +453,7 @@ Login page  starts
     align-items: center;
 }
 .login_cont{
-    color: #fff;
+    color: #ffffff;
     border: 4px double;
     max-width: fit-content;
     min-width: fit-content;
@@ -473,7 +473,7 @@ Login page  starts
     margin-bottom: 5vmin;
     font-family: 'Lato', sans-serif;
     font-size: 10vmin;
-    color: #fff;
+    color: #000000;
 
 }
 .sign_page a {
@@ -505,6 +505,25 @@ form::-webkit-scrollbar-thumb{
 label{
     font-size: 2vmin;
     font-weight: bold;
+}
+.successful_page{
+    position: relative;
+    height: 100%;
+}
+.successful_page small{
+    position: absolute;
+    bottom: 0%;
+    right: 40%;
+    font-size: larger;
+}
+.successful_page i{
+    font-size: 30vmin;
+    position: absolute;
+    color: #3858D6;
+    z-index: 1;
+    top: 30%;
+    left: 30%;
+    right: 50%;
 }
 
 .username_div input, .password_div input{
@@ -549,7 +568,7 @@ label{
     min-height: 2vmin;
     max-height: 2vmin;
 
-    background-color: #f6f6f6;
+    background-color: #000000;
 }
 #one{
     position: absolute;
@@ -686,7 +705,7 @@ sign up page  starts
 
 .Rdesign_cont{
     display: flex;
-    background-color: #f6f6f6;
+    background-color: #000000;
 }
 #Rone{
     position: absolute;
@@ -780,7 +799,7 @@ sign up page  starts
 }
 /* forgot page start */
 .forgotpw_page{
-    background-color: #000;
+    background-color: #ffffff;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -792,8 +811,9 @@ sign up page  starts
     align-items: center;
 }
 .forgotpw_cont{
-    background-color: #ffffff;
-    color: #fff;
+    position: relative;
+    background-color: #1a1717;
+    color: #ffffff;
     max-width: fit-content;
     min-width: fit-content;
     height: 65vmin;
@@ -807,7 +827,7 @@ sign up page  starts
 }
 .logo a{
     text-decoration: none;
-    color:#fff;
+    color:#000000;
 }
 /* forgotpw preference slide */
 .forgotpw_option{
@@ -820,6 +840,7 @@ sign up page  starts
 }
 .forgotpw_text{
     font-family: 'Lato', serif;
+    color: white;
 }
 .selcect_retrieve{
     font-family: 'Kurale', serif;
@@ -867,17 +888,20 @@ sign up page  starts
 .fg_pw_form_cont label{
     font-size: 1.5em;
     font-family: 'Kurale', serif;
+    color: white;
 
 }
 .forgotform_input{
     padding-top: 1.5vmin;
-    border-bottom: 2px solid rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(255, 251, 251);
     display: flex;
     justify-content: center;
 }
 .forgotform_input input{
     outline: none;
     border: none;
+    background: none;
+    color: #F6F6F6;
 }
 .forgotpw_btn{
     margin-top: 10vmin;
@@ -887,13 +911,17 @@ sign up page  starts
     border: none;
     background-color: #3858D6;
     cursor: pointer;
+    font-weight: bolder;
 }   
+.instruction{
+    color: white;
+}
 
 /* otp slide 😻e */ 
 
 .otpSlide_cont h5{
     font-family: 'Kurale', serif;
-    color: #000;
+    color: #ffffff;
     font-size: large;
 }
 .otpSlide_cont input{
@@ -917,7 +945,7 @@ sign up page  starts
 /* Confirm password slide */
 .forgotpw_cont{
     font-family: 'Kurale', serif;
-    color: #000;
+    color: #ffffff;
 }
 .inputfpw_cont i{
     font-size: smaller;

@@ -64,6 +64,9 @@ const Forgotpw = () => {
         <div className="forgotform_input">
           <input type="number" required placeholder="OTP" />
           </div>
+          <p className="not_recieve_code">
+            Didn't recieve the code?
+          </p>
         <a href="/Change-password" id="otp_confirmation_btn">
           <button className="otp_confirmation_btn"> Reset</button>
         </a>
