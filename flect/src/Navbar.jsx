@@ -24,7 +24,7 @@ const Navbar = (props) => {
                 <ul className="icons_links">
                     <li><a href="/"></a><i class="fa-brands fa-searchengin" id="Navbar_search_btn"></i></li>
                     <li><a href={props.loggedin?"/":"/Login"}><i class="fa-solid fa-user"></i></a></li>
-                    <li><a href="/"><i class="fa-solid fa-cart-shopping"></i>1</a></li>
+                    <li><a href="/cart"><i class="fa-solid fa-cart-shopping"></i>1</a></li>
                 </ul>
                 <nav>
                 <i className="fa-solid fa-bars" id="bars"></i>

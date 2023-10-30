@@ -8,7 +8,7 @@ const Lpbrands = () => {
           />
 
         <div className="lpbrands_info">
-          <h3>Apple Smart </h3>
+          <h3>Apple Smart watch </h3>
           <aside> <i className="fa-solid fa-star"></i>
                 <i className="fa-solid fa-star"></i>
                 <i className="fa-solid fa-star"></i>
