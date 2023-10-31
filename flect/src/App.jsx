@@ -4,7 +4,7 @@ import{ BrowserRouter as Router,Route, Routes} from "react-router-dom";
 import Register from "./Register";
 import Forgotpw from "./Forgotpw.";
 import Changepw from "./Changepw";
-import Cart from "./cart";
+import Maincart from "./main_cart";
 const App = () => {
   
   const loggedin = false
@@ -19,7 +19,7 @@ const App = () => {
             <Route path ="/Register" element={<Register />} />
             <Route path ="/Forgot-password" element={<Forgotpw />} />
             <Route path ="/Change-password" element={<Changepw />} />
-            <Route path ="/cart" element={<Cart/>} />
+            <Route path ="/cart" element={<Maincart/>} />
         </Routes>
           </div>
     </Router>

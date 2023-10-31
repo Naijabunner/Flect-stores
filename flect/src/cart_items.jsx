@@ -1,6 +1,4 @@
-const Cartitem = (props) => {
-    console.log(props.src)
-    
+const Cartitem = (props) => {    
   return (
     <>
       <section className="items_cont">
