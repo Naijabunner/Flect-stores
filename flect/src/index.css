@@ -1108,10 +1108,46 @@ sign up page  starts
     box-shadow: 1px 2px 10px  white;
 }
 
+/* Empty cart slide */
+.emptycart_cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+}
+.emptycart_txt{
+    font-size: 10vmin;
+    font-family: 'Kurale', serif;
+}
+.emptycart_cont img{
+    width: 20vw;
+}
+.countinue_shoppingbtn{
+    width: 20vw;
+    border-radius: 20px;
+    padding: 3px 0;
+    border: 4px double white;
+    background-color: #3858D6;
+    font-size: larger;
+    color: white;
+    font-family: 'Lato', serif;
+    cursor: pointer;
+}
+
 
 @media screen and (max-width: 757px){
     .links, .icons_links{
         display: none;
+}
+
+.emptycart_cont img{
+    width: 30vw;
+}
+.countinue_shoppingbtn{
+    width: 40vmin;
+    padding: 5px 0;
+    margin-top: 2rem;
 }
 nav{
     display: block;
