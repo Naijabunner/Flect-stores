@@ -1,7 +1,7 @@
 import Cart from "./cart";
 import Navbar from "./Navbar";
 import Emptycart from "./empty_cart";
-const Maincart = () => {
+const Maincart = (props) => {
     const picked_items = [
         // {
         //   name: "Apple Smart watch",
@@ -52,7 +52,7 @@ const Maincart = () => {
     return ( <>
     <div className="cart_page">
       <header className="navheader">
-        <Navbar />
+        <Navbar Isvisible={props.navIsvisible}/>
       </header>
       <Freeshippin_txt />
       </div>

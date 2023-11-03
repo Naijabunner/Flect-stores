@@ -5,12 +5,13 @@ import Clientsection from "./Clientssec";
 import Latestproducts from "./latestproducts";
 import Newsletter from "./Newsletter";
 const Homepage = (props) => {
-  console.log(props.loggedin) 
+
     return ( 
       
         <>
          <div className="lander">
-              <Navbar loggedin={props.loggedin}/>
+              <Navbar loggedin={props.loggedin}
+              Isvisible={props.navIsvisible}/>
               <Home />
             </div>
             <div className="section_two">
