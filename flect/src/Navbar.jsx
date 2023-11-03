@@ -12,10 +12,10 @@ const Navbar = (props) => {
                     <li><a href="/">Home</a></li>
                     <li className="brands"><a href="/">Brands <i className="fa-solid fa-angle-down" id="nav_arrow"></i></a>
                  <ul className="dropdown">
-                   <li><a href="/">Home</a></li>
-                   <li><a href="/">Home</a></li>
-                   <li><a href="/">Home</a></li>
-
+                   <li><a href="/">Apple</a></li>
+                   <li><a href="/">Xiaomi</a></li>
+                   <li><a href="/">FitBit</a></li>
+                   <li><a href="/">Samsung</a></li>
                     </ul>
                    </li>
 
