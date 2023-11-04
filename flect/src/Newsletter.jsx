@@ -1,4 +1,3 @@
-import Footer from "./Footer";
 
 const Newsletter = () => {
     return (
@@ -21,7 +20,6 @@ const Newsletter = () => {
             <img src=".\src\assets\brandAssets\6426000_sd-removebg-preview 1.png" alt="" />
             
             </div>
-            <Footer/>
     </div> 
     );
 }

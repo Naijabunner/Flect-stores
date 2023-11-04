@@ -20,7 +20,7 @@ const Navbar = (props) => {
                    </li>
 
                      
-                    <li><a href="/">Recent products</a></li>
+                    <li><a href="#recent_products">Recent products</a></li>
                     <li><a href="/">Contact</a></li>
                     <li><a href="/">About</a></li>
                 </ul>

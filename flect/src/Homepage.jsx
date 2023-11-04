@@ -4,6 +4,7 @@ import Brands from "./Brands";
 import Clientsection from "./Clientssec";
 import Latestproducts from "./latestproducts";
 import Newsletter from "./Newsletter";
+import Footer from "./Footer";
 const Homepage = (props) => {
 
     return ( 
@@ -19,6 +20,7 @@ const Homepage = (props) => {
               <Latestproducts />
               <Clientsection />
               <Newsletter />
+              <Footer/>
             </div>
         </>
     );

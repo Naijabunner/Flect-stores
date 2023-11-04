@@ -1,6 +1,7 @@
 import Cart from "./cart";
 import Navbar from "./Navbar";
 import Emptycart from "./empty_cart";
+import Footer from "./Footer";
 const Maincart = (props) => {
     const picked_items = [
         // {
@@ -57,6 +58,8 @@ const Maincart = (props) => {
       <Freeshippin_txt />
       </div>
       {picked_items.length === 0 ?<Emptycart/>:<Cart picked_items={picked_items}/>}
+      <Footer/>
+
     </> );
 }
  

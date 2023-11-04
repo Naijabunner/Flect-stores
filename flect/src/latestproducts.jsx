@@ -14,7 +14,7 @@ const Latestproducts = () => {
     return ( 
         <div className="latestproducts">
                     <div className="latestproducts_title">
-            <p>Find your favourite smart watch.</p>
+            <p id="recent_products">Find your favourite smart watch.</p>
             <h3>Our Latest Products</h3>
         </div>
         <div className="brand_container">
