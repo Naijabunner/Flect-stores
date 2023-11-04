@@ -21,8 +21,8 @@ const Navbar = (props) => {
 
                      
                     <li><a href="#recent_products">Recent products</a></li>
-                    <li><a href="/">Contact</a></li>
-                    <li><a href="/">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
                 </ul>
                 <ul className="icons_links">
                     <li><a href="/"></a><i class="fa-brands fa-searchengin" id="Navbar_search_btn"></i></li>

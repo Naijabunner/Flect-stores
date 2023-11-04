@@ -14,7 +14,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer_info">
-            <div className="footer_about">
+            <div className="footer_about" id="about">
               <header>ABOUT</header>
               <article>
               "Welcome to our E-commerce Smart Watch Store!  
@@ -24,7 +24,7 @@ const Footer = () => {
                 Stay connected, monitor your health, and elevate your everyday with our   selection of smartwatches. Shop now and redefine the way you experience time!"
               </article>
             </div>
-            <div className="fotter_products">
+            <div className="footer_products">
               <header>PRODUCTS</header>
               <ul>
                 <li><a href="">Apple</a></li>
@@ -42,7 +42,7 @@ const Footer = () => {
                 <li><a href="">Help</a></li>
               </ul>
             </div>
-            <div className="fotter_contact">
+            <div className="fotter_contact" id="contact">
               <header>CONTACT</header>
               <ul>
                 <li><i class="fa-solid fa-house-chimney"></i> Ikeja, Lagos.Nigeria</li>
@@ -51,7 +51,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <p>Copyright &copy;2023| bUrNnEr tHe DeV</p>
+          <p  className="copyright">Copyright &copy;2023| bUrNnEr tHe DeV</p>
         </section>
       </>
     );

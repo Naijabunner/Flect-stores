@@ -20,6 +20,7 @@ const Lpbrands = () => {
             <p className="newprice">$12345</p>
           </div>
         </div>
+        <button>Add to Cart</button>
       </div>
     );
 }

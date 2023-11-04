@@ -5,6 +5,9 @@ body{
     box-sizing: border-box;
     /* border:5px solid #fff; */
 }
+a :hover{
+    color :blue;
+}
 .header{
     border: 1px solid black;
     display:  flex;
@@ -311,7 +314,7 @@ min-width: 1vmin;
     align-items: center
 }
 .lpbrands_info h3{
-    font-size: 4vmin;
+    font-size: 3vmin;
     padding: 0;
     margin: 0;
 }
@@ -1152,7 +1155,7 @@ sign up page  starts
 /* footer slide */
 .footer{
     position: relative;
-    background-color: #000;
+    background-color: #292727;
     color: white;
     font-size: 2vmin;
     width: 100%;
@@ -1164,6 +1167,9 @@ sign up page  starts
 
     padding: 0;
     margin: 0;
+}
+li{
+    list-style: none;
 }
 .footer_social{
     display: flex;
@@ -1180,13 +1186,37 @@ sign up page  starts
 .footer_info{
     display: flex;
     justify-content: space-around;
+    margin-top: 1em;
+    font-family: 'Kurale', serif;
+}
+.footer_info header{
+    margin-bottom: 1em;
+    font-family: 'Lato', serif;
+    border-bottom: 2px solid white;
 }
 .footer_about article{
     text-align: justify;
   text-justify: inter-word;
   max-width: 30vw;
 }
-
+.footer_info ul {
+padding: 0;
+margin: 0;
+}
+.footer_info li{
+    text-decoration: none;
+    margin-bottom: 2em;
+}
+.footer_info li a{
+    text-decoration: none;
+    color: white;
+}
+section .copyright{
+    display: flex;
+    background-color: #000000;
+    justify-content: center;
+    
+}
 @media screen and (max-width: 757px){
     .links, .icons_links{
         display: none;
