@@ -1,14 +1,51 @@
-const Lpbrands = () => {
+import { useState } from "react";
+
+const Lpbrands = (props) => {
+  const pickedItems = props.pickedItems
+  const [btnclick, setbtnclick] = useState(false)
+  const url ="http://localhost:8000/picked_items/" + props.id
+  const thisData =
+    {
+      name: props.name,
+      Description: props.Description,
+      price: props.price,
+      qty: props.qty,
+      id: props.id,
+      src: props.src,
+      alt:props.alt,
+      added: btnclick
+    }
+    console.log(thisData)
+    console.log(url)
+
+  const addedToCartDataUpdate=()=>{
+    fetch(url,{
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(thisData),
+      }).then((res) => {
+       if (res.status === 500) {
+         throw Error("same id");
+       }else{console.log("completed")
+       
+        }
+        }).catch(err => {
+          console.log(err.message);
+        });
+  }
+  if (btnclick === true) {
+    addedToCartDataUpdate()
+  }
     return (
       <div className="lpbrands_cont">
         
           <img
-            src=".\src\assets\brandAssets\6426000_sd-removebg-preview 1.png"
-            alt=""
+            src={props.src}
+            alt={props.alt}
           />
 
         <div className="lpbrands_info">
-          <h3>Apple Smart watch </h3>
+          <h3>{props.name} </h3>
           <aside> <i className="fa-solid fa-star"></i>
                 <i className="fa-solid fa-star"></i>
                 <i className="fa-solid fa-star"></i>
@@ -16,11 +53,20 @@ const Lpbrands = () => {
                 <i className="fa-solid fa-star"></i>
           </aside>
           <div className="prices">
-            <p className="oldprice"><s>$12345</s></p>
-            <p className="newprice">$12345</p>
+            <p className="oldprice"><s>{props.price}</s></p>
+            <p className="newprice">{props.price}</p>
           </div>
         </div>
-        <button>Add to Cart</button>
+        <div className="addCrt"  onClick={()=>{props.handle_addtocart(props.id)
+          setbtnclick(true)}}>
+            {btnclick?<div className="control_qty">
+          <button>-</button>
+          <p>1</p>
+          <button>+</button>
+        </div>
+        :<button >Add to Cart</button>}
+        </div>
+        
       </div>
     );
 }

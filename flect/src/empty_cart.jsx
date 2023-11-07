@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const Emptycart = () => {
+const Emptycart = (props) => {
     const navigate =useNavigate()
 
     const handlesubmit_csbtn=()=>{
@@ -8,6 +8,7 @@ const Emptycart = () => {
     }
     return ( <>
     <div className="emptycart_cont">
+    {props.ispending && <div className="pending">Checking cart...</div>}
     <header className="emptycart_txt">
         Your cart is empty
     </header>

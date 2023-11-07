@@ -1,7 +1,7 @@
-const Cartitem = (props) => {    
+const Cartitem = (props) => {   
   return (
     <>
-      <section className="items_cont">
+      <section className="items_cont" >
         <div className="item_image_name">
         <img src={props.src} alt={props.alt}/>
           <p className="itemdesc"><strong>{props.name}</strong> <br />{props.Description}</p>
@@ -14,7 +14,8 @@ const Cartitem = (props) => {
           <p className="addqty">+</p>
         </div>
         <div className="total_cont">23456789</div>
-        <p className="remove_i"><i className="fa-solid fa-trash-can"></i></p>
+        <p className="remove_i" ><i className="fa-solid fa-trash-can"></i></p>
+        <button onClick={()=>props.check(props.id)}>345678</button>
       </section>
     </>
   );

@@ -6,7 +6,7 @@ import Latestproducts from "./latestproducts";
 import Newsletter from "./Newsletter";
 import Footer from "./Footer";
 const Homepage = (props) => {
-
+console.log(props.pickedItems)
     return ( 
       
         <>
@@ -17,7 +17,7 @@ const Homepage = (props) => {
             </div>
             <div className="section_two">
               <Brands />
-              <Latestproducts />
+              <Latestproducts handle_addtocart={props.handle_addtocart} pickedItems={props.pickedItems}/>
               <Clientsection />
               <Newsletter />
               <Footer/>
