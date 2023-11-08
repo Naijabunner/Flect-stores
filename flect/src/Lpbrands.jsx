@@ -1,9 +1,11 @@
 import { useState } from "react";
+import Usefetch from "./usefetch";
 
 const Lpbrands = (props) => {
   const pickedItems = props.pickedItems
-  const [btnclick, setbtnclick] = useState(false)
-  const url ="http://localhost:8000/picked_items/" + props.id
+  const url ="http://localhost:8000/items/" + props.id
+  const [btnclick, setbtnclick] = useState(props.added)
+
   const thisData =
     {
       name: props.name,
