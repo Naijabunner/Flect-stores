@@ -1,16 +1,6 @@
 {
   "picked_items": [
     {
-      "name": "Apple Smart watch",
-      "Description": "Apple Smart watch",
-      "price": "$12345",
-      "qty": "1",
-      "id": "1",
-      "src": "./src/assets/edited-pic_prev_ui (1).png",
-      "alt": "",
-      "added": false
-    },
-    {
       "name": "Appe Smart watch",
       "Description": "Apple Smart watch",
       "price": "$12345",
@@ -26,6 +16,36 @@
       "price": "$12345",
       "qty": "1",
       "id": "2",
+      "src": "./src/assets/edited-pic_prev_ui (1).png",
+      "alt": "",
+      "added": false
+    },
+    {
+      "name": "Apple Smart watch",
+      "Description": "Apple Smart watch",
+      "price": "$12345",
+      "qty": "1",
+      "id": "1",
+      "src": "./src/assets/edited-pic_prev_ui (1).png",
+      "alt": "",
+      "added": false
+    },
+    {
+      "name": "Appe Smart watch",
+      "Description": "Apple Smart watch",
+      "price": "$12345",
+      "qty": "1",
+      "id": "3",
+      "src": "./src/assets/edited-pic_prev_ui (1).png",
+      "alt": "",
+      "added": false
+    },
+    {
+      "name": "Appe Smart watch",
+      "Description": "Apple Smart watch",
+      "price": "$12345",
+      "qty": "1",
+      "id": "6",
       "src": "./src/assets/edited-pic_prev_ui (1).png",
       "alt": "",
       "added": false
@@ -70,7 +90,7 @@
       "id": "3",
       "src": "./src/assets/edited-pic_prev_ui (1).png",
       "alt": "",
-      "added": false
+      "added": true
     },
     {
       "name": "Appe Smart watch",
@@ -80,7 +100,7 @@
       "id": "6",
       "src": "./src/assets/edited-pic_prev_ui (1).png",
       "alt": "",
-      "added": false
+      "added": true
     }
   ]
 }

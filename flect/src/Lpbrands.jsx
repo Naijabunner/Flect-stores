@@ -36,7 +36,10 @@ const Lpbrands = (props) => {
         });
   }
   if (btnclick === true) {
+    setTimeout(() => {
     addedToCartDataUpdate()
+      
+    }, 2000);
   }
     return (
       <div className="lpbrands_cont">
