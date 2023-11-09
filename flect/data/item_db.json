@@ -1,54 +1,14 @@
 {
   "picked_items": [
     {
-      "name": "Appe Smart watch",
-      "Description": "Apple Smart watch",
-      "price": "$12345",
-      "qty": "1",
-      "id": "4",
-      "src": "./src/assets/edited-pic_prev_ui (1).png",
-      "alt": "",
-      "added": false
-    },
-    {
-      "name": "Appe Smart watch",
-      "Description": "Apple Smart watch",
-      "price": "$12345",
-      "qty": "1",
-      "id": "2",
-      "src": "./src/assets/edited-pic_prev_ui (1).png",
-      "alt": "",
-      "added": false
-    },
-    {
       "name": "Apple Smart watch",
       "Description": "Apple Smart watch",
       "price": "$12345",
-      "qty": "1",
+      "qty": 2,
       "id": "1",
       "src": "./src/assets/edited-pic_prev_ui (1).png",
       "alt": "",
-      "added": false
-    },
-    {
-      "name": "Appe Smart watch",
-      "Description": "Apple Smart watch",
-      "price": "$12345",
-      "qty": "1",
-      "id": "3",
-      "src": "./src/assets/edited-pic_prev_ui (1).png",
-      "alt": "",
-      "added": false
-    },
-    {
-      "name": "Appe Smart watch",
-      "Description": "Apple Smart watch",
-      "price": "$12345",
-      "qty": "1",
-      "id": "6",
-      "src": "./src/assets/edited-pic_prev_ui (1).png",
-      "alt": "",
-      "added": false
+      "added": true
     }
   ],
   "items": [
@@ -70,7 +30,7 @@
       "id": "4",
       "src": "./src/assets/edited-pic_prev_ui (1).png",
       "alt": "",
-      "added": true
+      "added": false
     },
     {
       "name": "Appe Smart watch",
@@ -80,7 +40,7 @@
       "id": "2",
       "src": "./src/assets/edited-pic_prev_ui (1).png",
       "alt": "",
-      "added": true
+      "added": false
     },
     {
       "name": "Appe Smart watch",
@@ -90,7 +50,7 @@
       "id": "3",
       "src": "./src/assets/edited-pic_prev_ui (1).png",
       "alt": "",
-      "added": true
+      "added": false
     },
     {
       "name": "Appe Smart watch",
@@ -100,7 +60,7 @@
       "id": "6",
       "src": "./src/assets/edited-pic_prev_ui (1).png",
       "alt": "",
-      "added": true
+      "added": false
     }
   ]
 }

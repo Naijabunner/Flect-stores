@@ -1,11 +1,11 @@
 import { useState } from "react";
-import Usefetch from "./usefetch";
-
+import Reduceqty from "./Reduceqty";
 const Lpbrands = (props) => {
   const pickedItems = props.pickedItems
   const url ="http://localhost:8000/items/" + props.id
+  const pickedurl ="http://localhost:8000/picked_items/" + props.id
   const [btnclick, setbtnclick] = useState(props.added)
-
+  
   const thisData =
     {
       name: props.name,
@@ -19,12 +19,12 @@ const Lpbrands = (props) => {
     }
     console.log(thisData)
     console.log(url)
-
-  const addedToCartDataUpdate=()=>{
+console.log(props.qty)
+  const addedToCartDataUpdate=(updatedData)=>{
     fetch(url,{
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(thisData),
+        body: JSON.stringify(updatedData),
       }).then((res) => {
        if (res.status === 500) {
          throw Error("same id");
@@ -37,7 +37,7 @@ const Lpbrands = (props) => {
   }
   if (btnclick === true) {
     setTimeout(() => {
-    addedToCartDataUpdate()
+    addedToCartDataUpdate(thisData)
       
     }, 2000);
   }
@@ -64,14 +64,13 @@ const Lpbrands = (props) => {
         </div>
         <div className="addCrt"  onClick={()=>{props.handle_addtocart(props.id)
           setbtnclick(true)}}>
-            {btnclick?<div className="control_qty">
-          <button>-</button>
+            {!btnclick && <button >Add to Cart</button>}
+        </div>
+        {btnclick && <div className="control_qty">
+          <button onClick={()=>Reduceqty(thisData, pickedurl)}>-</button>
           <p>1</p>
           <button>+</button>
-        </div>
-        :<button >Add to Cart</button>}
-        </div>
-        
+        </div>}
       </div>
     );
 }
