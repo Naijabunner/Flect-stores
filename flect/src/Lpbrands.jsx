@@ -23,7 +23,7 @@ const Lpbrands = (props) => {
     console.log(thisData)
 
   const addedToCartDataUpdate=(updatedData)=>{
-    fetch(url, {
+    fetch(url,{
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedData),
@@ -37,12 +37,15 @@ const Lpbrands = (props) => {
           console.log(err.message);
         });
   }
-  if (btnclick === true) {
+  useEffect(()=>{
+if (btnclick === true) {
     setTimeout(() => {
     addedToCartDataUpdate(thisData)
       
     }, 2000);
   }
+  }, [btnclick])
+  
     return (
       <div className="lpbrands_cont">
         
