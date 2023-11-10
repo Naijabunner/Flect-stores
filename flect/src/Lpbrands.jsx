@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Reduceqty from "./Reduceqty";
 const Lpbrands = (props) => {
   const pickedItems = props.pickedItems
   const url ="http://localhost:8000/items/" + props.id
   const pickedurl ="http://localhost:8000/picked_items/" + props.id
   const [btnclick, setbtnclick] = useState(props.added)
-  
+  const picked = props.picked
+  const alldata =picked.filter(alldata=> alldata.id== props.id)
+
+  console.log(alldata)
   const thisData =
     {
       name: props.name,
@@ -18,10 +21,9 @@ const Lpbrands = (props) => {
       added: btnclick
     }
     console.log(thisData)
-    console.log(url)
-console.log(props.qty)
+
   const addedToCartDataUpdate=(updatedData)=>{
-    fetch(url,{
+    fetch(url, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedData),

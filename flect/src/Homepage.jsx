@@ -17,7 +17,8 @@ console.log(props.pickedItems)
             </div>
             <div className="section_two">
               <Brands />
-              <Latestproducts handle_addtocart={props.handle_addtocart} pickedItems={props.pickedItems}/>
+              <Latestproducts handle_addtocart={props.handle_addtocart} pickedItems={props.pickedItems} 
+              picked ={props.picked}/>
               <Clientsection />
               <Newsletter />
               <Footer/>

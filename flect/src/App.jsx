@@ -38,7 +38,6 @@ const finishroundUpPickedItemsId = roundUpPickedItemsId(picked)
     if (finishroundUpPickedItemsId.includes(id)) {
        console.log(finishroundUpPickedItemsId)
     } else {
-      
       fetch("http://localhost:8000/picked_items",{
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -54,25 +53,7 @@ const finishroundUpPickedItemsId = roundUpPickedItemsId(picked)
         });
     }
      };
-  // const alldata = addedItems ? data : console.log("gone");
-    // setaddeditem(addedItems)
-    // fetch("http://localhost:8000/picked_items", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(data),
-    // }).then(() => {
-    //     setaddeditem("");
-    //     console.log("added");
-    //   }).catch((err) => {
-    //     console.log(err.message);
-    //   });
-    // setaddeditem(id);
-    // console.log(id);
-    // console.log(data);
-    // const handleNavisvisible =(e)=>{
-        
-    //     console.log(e.target.parentElement.className)
-    // }
+  
   
   return (
     <>
@@ -83,7 +64,8 @@ const finishroundUpPickedItemsId = roundUpPickedItemsId(picked)
             loggedin={loggedin}
             navIsvisible={navIsvisible}
             handle_addtocart={handle_addtocart}
-            pickedItems={finishroundUpPickedItemsId}/>} />
+            pickedItems={finishroundUpPickedItemsId}
+            picked ={picked}/>} />
             <Route path ="/Login" element={<Login />} />
             <Route path ="/Register" element={<Register />} />
             <Route path ="/Forgot-password" element={<Forgotpw />} />

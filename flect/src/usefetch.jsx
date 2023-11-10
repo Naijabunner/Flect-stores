@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const Usefetch = (url) => {
+const Usefetch = (url, dep) => {
     const [data, setData]= useState([])
     const [ispending, setispending]= useState(true)
     const [error, seterror]= useState(null)
@@ -25,7 +25,7 @@ const Usefetch = (url) => {
         });
         }, 1000);
                
-    }, [])
+    }, [dep])
      return{data, ispending, error}
 }
  

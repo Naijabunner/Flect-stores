@@ -1,5 +1,9 @@
+
 const Reduceqty = (data, url) => {
+
     async function asyncReduce(){
+         
+         console.log(data)
         const qty=Number(data.qty)
     const reduceTheQty=qty + 1
         const allPropsData = {
