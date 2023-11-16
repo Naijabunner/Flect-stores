@@ -5,7 +5,7 @@ const Latestproducts = (props) => {
     const {data, ispending}= Usefetch( "http://localhost:8000/items")
     const allitems_mapped =data.map((alldata)=>{
         return(
-            <Lpbrands key={alldata.id} {...alldata} handle_addtocart={props.handle_addtocart} pickedItems={props.pickedItems} picked ={props.picked}/>
+            <Lpbrands key={alldata.id} {...alldata} handle_addtocart={props.handle_addtocart} pickedItems={props.pickedItems} picked ={props.picked} allPickedId = {props.allPickedId}/>
         )
     })
     return ( 

@@ -8,9 +8,7 @@ const Maincart = (props) => {
   const {data, ispending}= Usefetch( "http://localhost:8000/picked_items")
 
 // getting id onclick
-  const check =(id)=>{
-  console.log(id)
-}
+
     const Freeshippin_txt = () => {
         return (
           <>
@@ -27,8 +25,7 @@ const Maincart = (props) => {
       </header>
       <Freeshippin_txt />
       </div>
-      {data.length === 0?<Emptycart ispending={ispending}/>:<Cart picked_items={data}
-      check={check}/>}
+      {data.length === 0?<Emptycart ispending={ispending}/>:<Cart picked_items={data}/>}
       <Footer/>
     </> );
 }

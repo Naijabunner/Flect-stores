@@ -1,10 +1,11 @@
 import Cartitem from "./cart_items";
 import Checkout from "./checkout";
 const Cart = (props) => {
+  console.log(props)
   const picked_item = props.picked_items
   const cartItems = picked_item.map((allpicked_items) => {
     return <Cartitem key={allpicked_items.id} {...allpicked_items} 
-    check={props.check} />;
+    />;
   });
 
   return (

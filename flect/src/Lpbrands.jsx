@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Reduceqty from "./Reduceqty";
+import Addreducebtn from "./addReduceBtn";
 const Lpbrands = (props) => {
   const pickedItems = props.pickedItems
   const url ="http://localhost:8000/items/" + props.id
@@ -7,8 +7,8 @@ const Lpbrands = (props) => {
   const [btnclick, setbtnclick] = useState(props.added)
   const picked = props.picked
   const alldata =picked.filter(alldata=> alldata.id== props.id)
-
-  console.log(alldata)
+  const ppl = alldata[0]
+  
   const thisData =
     {
       name: props.name,
@@ -20,7 +20,6 @@ const Lpbrands = (props) => {
       alt:props.alt,
       added: btnclick
     }
-    console.log(thisData)
 
   const addedToCartDataUpdate=(updatedData)=>{
     fetch(url,{
@@ -71,11 +70,10 @@ if (btnclick === true) {
           setbtnclick(true)}}>
             {!btnclick && <button >Add to Cart</button>}
         </div>
-        {btnclick && <div className="control_qty">
-          <button onClick={()=>Reduceqty(thisData, pickedurl)}>-</button>
-          <p>1</p>
-          <button>+</button>
-        </div>}
+        {btnclick && <Addreducebtn url={url}
+        thisData ={thisData}
+        pickedurl= {pickedurl}
+        allPickedId = {props.allPickedId}/>}
       </div>
     );
 }

@@ -10,18 +10,15 @@ import Usefetch from "./usefetch";
 const App = () => {
   const loggedin = false
   const [navIsvisible, SetnavIsvisible] = useState(false)
-  const [complete, setCompleted] = useState(false)
   const {data, ispending, error}= Usefetch("http://localhost:8000/items");
   const {data:picked}= Usefetch("http://localhost:8000/picked_items");
-console.log(picked)
-
-
 
   const handleDocumentclick=(e)=>{
     e.target.parentElement.className === "ham_nav"?SetnavIsvisible((nav)=>!nav):SetnavIsvisible(false)
   }
+  const allPickedId=[]
   const roundUpPickedItemsId=(arr)=>{
-    const allPickedId=[]
+    
   for (let i =0; i < arr.length; i++) {
     if (arr[i].id) {
       allPickedId.push(arr[i].id)
@@ -65,7 +62,8 @@ const finishroundUpPickedItemsId = roundUpPickedItemsId(picked)
             navIsvisible={navIsvisible}
             handle_addtocart={handle_addtocart}
             pickedItems={finishroundUpPickedItemsId}
-            picked ={picked}/>} />
+            picked ={picked}
+            thisallPickedId ={allPickedId}/>} />
             <Route path ="/Login" element={<Login />} />
             <Route path ="/Register" element={<Register />} />
             <Route path ="/Forgot-password" element={<Forgotpw />} />

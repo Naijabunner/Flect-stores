@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const Usefetch = (url, dep) => {
+const Usefetch = (url) => {
     const [data, setData]= useState([])
     const [ispending, setispending]= useState(true)
     const [error, seterror]= useState(null)
@@ -17,6 +17,7 @@ const Usefetch = (url, dep) => {
         .then(data =>{
             setData(data)
             setispending(false)
+            console.log("fetch ran")
         })
         .catch(err=>{
             seterror(err)
@@ -25,7 +26,7 @@ const Usefetch = (url, dep) => {
         });
         }, 1000);
                
-    }, [dep])
+    },[])
      return{data, ispending, error}
 }
  
