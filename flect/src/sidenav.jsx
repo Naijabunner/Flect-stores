@@ -1,6 +1,5 @@
 
 const Sidenav = (props) => {
-    console.log(props.Isvisible)
     return ( <>
      <div className="side_nav">
         

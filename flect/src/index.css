@@ -1130,6 +1130,7 @@ sign up page  starts
     align-items: center;
     justify-content: center;
     padding-top: 1rem;
+    position: relative;
 }
 .emptycart_txt{
     font-size: 10vmin;
@@ -1217,10 +1218,26 @@ section .copyright{
     justify-content: center;
     
 }
+.pending{
+    width: 100%;
+    height: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', serif;
+    position: absolute;
+    font-size: 5vmin;
+    top: 0.3%;
+    background-color: #6c2525;
+}
 @media screen and (max-width: 757px){
     .links, .icons_links{
         display: none;
 }
+/* .pending{
+    width: 100vw;
+    height: 50vw;
+} */
 .side_nav {
     display: block;
 }

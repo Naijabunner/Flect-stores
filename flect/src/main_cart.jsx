@@ -2,45 +2,13 @@ import Cart from "./cart";
 import Navbar from "./Navbar";
 import Emptycart from "./empty_cart";
 import Footer from "./Footer";
+import Usefetch from "./usefetch";
+
 const Maincart = (props) => {
-    const picked_items = [
-        // {
-        //   name: "Apple Smart watch",
-        //   Description: "Apple Smart watch",
-        //   price: "$12345",
-        //   qty: "1",
-        //   id: "1",
-        //   src: "./src/assets/edited-pic_prev_ui (1).png",
-        //   alt: "",
-        // },
-        // {
-        //   name: "Apple Smart watch",
-        //   Description: "Apple Smart watch",
-        //   price: "$12345",
-        //   qty: "1",
-        //   id: "4",
-        //   src: "./src/assets/edited-pic_prev_ui (1).png",
-        //   alt: "",
-        // },
-        // {
-        //   name: "Apple Smart watch",
-        //   Description: "Apple Smart watch",
-        //   price: "$12345",
-        //   qty: "1",
-        //   id: "2",
-        //   src: "./src/assets/edited-pic_prev_ui (1).png",
-        //   alt: "",
-        // },
-        // {
-        //   name: "Apple Smart watch",
-        //   Description: "Apple Smart watch",
-        //   price: "$12345",
-        //   qty: "1",
-        //   id: "3",
-        //   src: "./src/assets/edited-pic_prev_ui (1).png",
-        //   alt: "",
-        // },
-      ];
+  const {data, ispending}= Usefetch( "http://localhost:8000/picked_items")
+
+// getting id onclick
+
     const Freeshippin_txt = () => {
         return (
           <>
@@ -57,9 +25,8 @@ const Maincart = (props) => {
       </header>
       <Freeshippin_txt />
       </div>
-      {picked_items.length === 0 ?<Emptycart/>:<Cart picked_items={picked_items}/>}
+      {data.length === 0?<Emptycart ispending={ispending}/>:<Cart picked_items={data}/>}
       <Footer/>
-
     </> );
 }
  
