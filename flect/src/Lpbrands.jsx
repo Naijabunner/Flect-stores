@@ -68,7 +68,7 @@ if (btnclick === true) {
         </div>
         <div className="addCrt"  onClick={()=>{props.handle_addtocart(props.id)
           setbtnclick(true)}}>
-            {!btnclick && <button >Add to Cart</button>}
+            {!btnclick && <button className="addTOCartBtn">Add to Cart</button>}
         </div>
         {btnclick && <Addreducebtn url={url}
         thisData ={thisData}
