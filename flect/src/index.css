@@ -97,8 +97,6 @@ ul.dropdown li{
     z-index: 999;
     padding:0;
     display: none;
-    transform: scaleY(0);
-    transition: transform 2s ease;
 }
 .dropdown li{
     display: flex;
@@ -112,7 +110,6 @@ ul.dropdown li{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    transform: scaleY(1);
 }
 .header li a{
     text-decoration: none;
