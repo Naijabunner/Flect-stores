@@ -21,7 +21,8 @@ const Maincart = (props) => {
     return ( <>
     <div className="cart_page">
       <header className="navheader">
-        <Navbar Isvisible={props.navIsvisible}/>
+        <Navbar Isvisible={props.navIsvisible}
+        pickedLength= {props.pickedLength}/>
       </header>
       <Freeshippin_txt />
       </div>

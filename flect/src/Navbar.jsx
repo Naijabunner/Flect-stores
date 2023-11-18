@@ -25,7 +25,7 @@ const Navbar = (props) => {
                 <ul className="icons_links">
                     <li><a href="/"></a><i className="fa-brands fa-searchengin" id="Navbar_search_btn"></i></li>
                     <li><a href={props.loggedin?"/":"/Login"}><i className="fa-solid fa-user"></i></a></li>
-                    <li><a href="/cart"><i className="fa-solid fa-cart-shopping"></i>1</a></li>
+                    <li><a href="/cart"><i className="fa-solid fa-cart-shopping"></i>{props.pickedLength}</a></li>
                 </ul>
                 <nav className="ham_nav" >
                 <i className={!props.Isvisible?"fa-solid fa-bars":"fa-solid fa-x"}  ></i>

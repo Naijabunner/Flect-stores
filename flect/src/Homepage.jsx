@@ -11,7 +11,8 @@ const Homepage = (props) => {
         <>
          <div className="lander">
               <Navbar loggedin={props.loggedin}
-              Isvisible={props.navIsvisible}/>
+              Isvisible={props.navIsvisible}
+              pickedLength= {props.pickedLength}/>
               <Home />
             </div>
             <div className="section_two">
