@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Homepage from "./Homepage";
 import Login from "./Login";
 import{ BrowserRouter as Router,Route, Routes} from "react-router-dom";
@@ -12,7 +12,21 @@ const App = () => {
   const [navIsvisible, SetnavIsvisible] = useState(false)
   const {data, ispending, error}= Usefetch("http://localhost:8000/items");
   const {data:picked}= Usefetch("http://localhost:8000/picked_items");
-
+ const [useData, setuseData]= useState(0)
+ 
+  const fetchData = async () => {
+    try {
+      const response = await fetch("http://localhost:8000/picked_items");
+      console.log(response)
+      const result = await response.json();
+      setuseData(result.length);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+  useEffect(() => {
+    fetchData();
+  }, []); 
   const handleDocumentclick=(e)=>{
     e.target.parentElement.className === "ham_nav"?SetnavIsvisible((nav)=>!nav):SetnavIsvisible(false)
   }
@@ -49,6 +63,7 @@ const finishroundUpPickedItemsId = roundUpPickedItemsId(picked)
           console.log(err.message);
         });
     }
+    fetchData();
      };
   
   
@@ -63,13 +78,15 @@ const finishroundUpPickedItemsId = roundUpPickedItemsId(picked)
             handle_addtocart={handle_addtocart}
             pickedItems={finishroundUpPickedItemsId}
             picked ={picked}
-            thisallPickedId ={allPickedId}/>} />
+            thisallPickedId ={allPickedId}
+            pickedLength={useData>0?useData:picked.length}/>} />
             <Route path ="/Login" element={<Login />} />
             <Route path ="/Register" element={<Register />} />
             <Route path ="/Forgot-password" element={<Forgotpw />} />
             <Route path ="/Change-password" element={<Changepw />} />
             <Route path ="/cart" element={<Maincart
-            navIsvisible={navIsvisible}/>} />
+            navIsvisible={navIsvisible}
+            pickedLength={picked.length}/>}  />
         </Routes>
           </div>
     </Router>
