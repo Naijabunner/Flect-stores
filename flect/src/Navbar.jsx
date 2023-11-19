@@ -9,18 +9,18 @@ const Navbar = (props) => {
                 FLECT
             </h1>
                 <ul className="links">
-                    <li><a href="/">Home</a></li>
+                    <li ><a href="/" className="forHover">Home</a></li>
                     <li className="brands"><a href="/">Brands <i className="fa-solid fa-angle-down" id="nav_arrow"></i></a>
                  <ul className="dropdown">
-                   <li><a href="/">Apple</a></li>
-                   <li><a href="/">Xiaomi</a></li>
-                   <li><a href="/">FitBit</a></li>
-                   <li><a href="/">Samsung</a></li>
+                   <li><a href="/" className="forHover" >Apple</a></li>
+                   <li><a href="/" className="forHover" >Xiaomi</a></li>
+                   <li><a href="/" className="forHover" >FitBit</a></li>
+                   <li><a href="/" className="forHover">Samsung</a></li>
                     </ul>
                    </li>
-                    <li><a href="#recent_products">Recent products</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#recent_products" className="forHover">Recent products</a></li>
+                    <li><a href="#contact" className="forHover">Contact</a></li>
+                    <li><a href="#about" className="forHover">About</a></li>
                 </ul>
                 <ul className="icons_links">
                     <li><a href="/"></a><i className="fa-brands fa-searchengin" id="Navbar_search_btn"></i></li>

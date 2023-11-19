@@ -5,8 +5,24 @@ body{
     box-sizing: border-box;
     /* border:5px solid #fff; */
 }
-a :hover{
-    color :rgb(0, 0, 0);
+.forHover::before{
+    content: "";
+    background-color: #3858D6;
+    position: absolute;
+    bottom: 0;
+    top: 90%;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 300ms ease;
+}
+.forHover:hover::before {
+    transform: scaleX(1);
+
+}
+a{
+    position: relative;
 }
 .addTOCartBtn{
     padding: 0.3vw 1vw;
@@ -1298,6 +1314,7 @@ section .copyright{
 
     .links, .icons_links{
         display: none;
+        position: relative;
 }
 
 /* .pending{
