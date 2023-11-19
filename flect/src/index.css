@@ -1276,6 +1276,20 @@ section .copyright{
     top: 0.3%;
     background-color: #6c2525;
 }
+.cart_btn{
+    display: flex;
+    position: relative;
+    width: 2rem;
+    height: 1rem;
+    padding-top: 0.8em;
+ }
+.cart_btn p{
+    margin: 0;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+ }
+
 @media screen and (max-width: 757px){
     #ham_nav_visible{
         display: block;
@@ -1285,6 +1299,7 @@ section .copyright{
     .links, .icons_links{
         display: none;
 }
+
 /* .pending{
     width: 100vw;
     height: 50vw;
